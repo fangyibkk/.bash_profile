@@ -34,6 +34,7 @@ extract () {
 
 # Configuration
 export DISPLAY=:0 # For WSL export to x server on windows
+export HISTTIMEFORMAT="[%Y-%m-%d] %T   "
 stty -ixon # enable ctrl+s for forward search
 
 # enable color support of ls and also add handy aliases
