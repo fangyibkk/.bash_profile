@@ -1,4 +1,4 @@
-### .bash_profile
+## .bash_profile
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
@@ -8,6 +8,9 @@ There are useful short function, configuration and key binding.
 ```sh
 convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
 ```
+
+### extract
+$ tar -I zstd -xvf archive.tar.zst
 
 ### resize video
 ```sh
