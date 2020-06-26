@@ -27,6 +27,15 @@ ffmpeg -i file.{webp,jpg}
 
 ### For Arch WSL
 See Yuk7 repos for download and etc.
+```
 Arch.exe config --default-user myuser
 sc stop LxssManager
 sc start LxssManager
+```
+
+### sudo setup
+```
+EDITOR=vim && visudo
+looking for line allowing wheel group for sudo
+sudo usermod -aG wheel <username>
+```
