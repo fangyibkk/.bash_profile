@@ -42,3 +42,14 @@ EDITOR=vim && visudo
 looking for line allowing wheel group for sudo
 sudo usermod -aG wheel <username>
 ```
+
+
+### checksum and gpg
+SHA256
+```
+sha256sum --check <<< "1f20cd153b2c32...612b3e927ba audacity-win-2.4.2.exe"
+```
+The `<<<` is turning string to file stdin. Alternatively,
+```
+echo "1f20cd153b2c32...612b3e927ba audacity-win-2.4.2.exe" | sha256sum --check
+```
