@@ -10,7 +10,9 @@ convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg resu
 ```
 
 ### extract
+```
 $ tar -I zstd -xvf archive.tar.zst
+```
 
 ### resize video
 ```sh
@@ -26,6 +28,12 @@ ffmpeg omg it can do
 ```sh
 ffmpeg -i file.{webp,png}
 ffmpeg -i file.{webp,jpg}
+```
+
+### convert svg
+```
+convert -density 1200 -resize 192x192 -background white -gravity center -extent 192x192 logo-color.svg logo-192.png
+convert -density 1200 -resize 512x512 -background white -gravity center -extent 512x512 logo-color.svg logo-512.png
 ```
 
 ### For Arch WSL
