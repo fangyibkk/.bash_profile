@@ -61,3 +61,30 @@ The `<<<` is turning string to file stdin. Alternatively,
 ```
 echo "1f20cd153b2c32...612b3e927ba audacity-win-2.4.2.exe" | sha256sum --check
 ```
+
+### find command findutils
+```
+sudo find /usr -name "*docker*" -type l -exec rm {} +
+```
+the plus `+` sign vs `;` semicolon is the `find` utils cryptic
+```
+find . -exec ls {} ;
+// in some terminal need escape to
+find . -exec ls '{}' \;
+```
+transform to
+```
+ls file1
+ls file2
+ls file3
+```
+but
+```
+find . -exec ls {} +
+// in some terminal need escape to
+find . -exec ls '{}' \+
+```
+transform to
+```
+ls file1 file2 file3
+```
