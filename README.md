@@ -88,3 +88,9 @@ transform to
 ```
 ls file1 file2 file3
 ```
+
+### ssh copy file
+Run this on local machine
+```
+scp -i "my_pem_file.pem" myfile.zip ubuntu@ec2-13-...-131.ap-southeast-1.compute.amazonaws.com:/home/ubuntu/
+```
