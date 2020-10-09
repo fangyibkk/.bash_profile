@@ -4,6 +4,16 @@ There are useful short function, configuration and key binding.
 
 
 ### useful command
+
+### white bg to transparent
+```
+convert  your.jpg  -transparent white  your.png
+```
+### simple resize
+```
+convert logo512.png -resize 150x150 logo150.png
+```
+
 ### resize image
 ```sh
 convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
