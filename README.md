@@ -2,9 +2,7 @@
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
-
-### useful command
-
+## Image and video utils
 ### white bg to transparent
 ```
 convert  your.jpg  -transparent white  your.png
@@ -19,9 +17,9 @@ convert logo512.png -resize 150x150 logo150.png
 convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
 ```
 
-### extract
+### resize with fill
 ```
-$ tar -I zstd -xvf archive.tar.zst
+convert -background white -gravity center before.jpg -resize 200x200 -extent 200x200 after.jpg
 ```
 
 ### resize video
@@ -45,6 +43,7 @@ ffmpeg -i file.{webp,jpg}
 convert -density 1200 -resize 192x192 -background white -gravity center -extent 192x192 logo-color.svg logo-192.png
 convert -density 1200 -resize 512x512 -background white -gravity center -extent 512x512 logo-color.svg logo-512.png
 ```
+## useful command
 
 ### For Arch WSL
 See Yuk7 repos for download and etc.
@@ -61,6 +60,10 @@ looking for line allowing wheel group for sudo
 sudo usermod -aG wheel <username>
 ```
 
+### extract
+```
+$ tar -I zstd -xvf archive.tar.zst
+```
 
 ### checksum and gpg
 SHA256
