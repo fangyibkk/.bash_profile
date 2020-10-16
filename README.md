@@ -2,6 +2,16 @@
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
+## curl JSON
+```
+curl -H "Content-Type: application/json" \
+  -X POST \
+  -d '{"aaa":"xx","password":"yyy"}' \
+  http://localhost:3000/some/path
+```
+some short hand here
+`-d=--data`, `-X=--request`, `-H=--header`
+
 ## Image and video utils
 ### white bg to transparent
 ```
