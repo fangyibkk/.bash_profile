@@ -2,6 +2,12 @@
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
+## Docker tips
+```
+21da3r92vsd23r --> can only type 21d.. as long as it's unique
+docker container diff <container_id>
+```
+
 ## curl JSON
 ```
 curl -H "Content-Type: application/json" \
