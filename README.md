@@ -8,6 +8,8 @@ There are useful short function, configuration and key binding.
 docker container diff <container_id>
 docker container commit <container_id> --> make this into image
 docker image tag <image_id> image_name_foo
+docker image build -t hello:v0.1 ./
+docker image history <image_id>
 ```
 the specifier `image` and `container` is for beginner usage.
 After getting to know docker, it can be omitted.
