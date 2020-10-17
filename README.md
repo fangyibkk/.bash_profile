@@ -6,7 +6,11 @@ There are useful short function, configuration and key binding.
 ```
 21da3r92vsd23r --> can only type 21d.. as long as it's unique
 docker container diff <container_id>
+docker container commit <container_id> --> make this into image
+docker image tag <image_id> image_name_foo
 ```
+the specifier `image` and `container` is for beginner usage.
+After getting to know docker, it can be omitted.
 
 ## curl JSON
 ```
