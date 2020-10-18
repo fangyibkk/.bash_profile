@@ -3,12 +3,25 @@ This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
 ## bash expansion
-expansion `${var/repalce/by_string}`
+expansion `${var/repalce/by_string}` \
 use case e.g. replace string
 ```
 for n in $(ls prefix1_*); do
   mv $n ${n/prefix1_/prefix2_}
 done
+```
+## Common Confusion
+`$()` is for command \
+`${}` is for variable \
+the `"${}"` is verbose but by default `${}` is the string interpolation
+```
+x=world
+echo "hello ${x}"
+// hello world
+echo "hello ${x/world/github}"
+// hello github
+echo "hello $(hostname -a)"
+// hello 
 ```
 
 ## Docker tips
