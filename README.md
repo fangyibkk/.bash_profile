@@ -2,6 +2,15 @@
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
+## bash expansion
+expansion `${var/repalce/by_string}`
+use case e.g. replace string
+```
+for n in $(ls prefix1_*); do
+  mv $n ${n/prefix1_/prefix2_}
+done
+```
+
 ## Docker tips
 ```
 21da3r92vsd23r --> can only type 21d.. as long as it's unique
@@ -23,6 +32,12 @@ curl -H "Content-Type: application/json" \
 ```
 some short hand here
 `-d=--data`, `-X=--request`, `-H=--header`
+### curl download
+```
+curl -fsSL ...
+```
+s = silent used with S = not silent when fail
+L = redirect if moved
 
 ## Image and video utils
 ### white bg to transparent
