@@ -24,6 +24,11 @@ echo "hello $(hostname -a)"
 // hello 
 ```
 
+## Compress PDF
+```
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+```
+
 ## Docker tips
 ```
 21da3r92vsd23r --> can only type 21d.. as long as it's unique
