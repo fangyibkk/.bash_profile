@@ -71,6 +71,10 @@ convert logo512.png -resize 150x150 logo150.png
 ```sh
 convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
 ```
+### flip horizontal
+```
+convert -flop input.png output.png
+```
 
 ### resize with fill
 ```
