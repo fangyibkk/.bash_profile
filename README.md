@@ -2,6 +2,9 @@
 This intends to be an overly simplified and stand alone bash_profile
 There are useful short function, configuration and key binding.
 
+## Paste to password prompt
+Shift+Insert
+
 ## bash expansion
 expansion `${var/repalce/by_string}` \
 use case e.g. replace string
