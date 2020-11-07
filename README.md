@@ -163,6 +163,19 @@ transform to
 ```
 ls file1 file2 file3
 ```
+Personally I think `find ... | xargs ...` is better syntax
+
+## disk space
+`du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
+512 byte = 1 block \
+2 block = 1024 byte = 1 kb \
+The option `-k` will make it normal `kb`. GNU du make `-k` default.
+References: http://web.sxu.edu/rogers/unix/bytes.html
+```
+du -sh # sum all under directory
+du -a # directories and file
+du -a | sort -nr # most common case
+```
 
 ### ssh copy file
 Run this on local machine
