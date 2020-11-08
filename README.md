@@ -165,6 +165,11 @@ ls file1 file2 file3
 ```
 Personally I think `find ... | xargs ...` is better syntax
 
+### find excluding dirs
+```
+find . \( -path ./node_modules -or -path ./.git \) -prune -false -or -type f
+```
+
 ## disk space
 `du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
 512 byte = 1 block \
