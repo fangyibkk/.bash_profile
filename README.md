@@ -169,6 +169,7 @@ Personally I think `find ... | xargs ...` is better syntax
 ```
 find . \( -path ./node_modules -or -path ./.git \) -prune -false -or -type f
 ```
+Some shorthand here `-o=-or, -a=-and, !=-not`
 
 ## disk space
 `du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
