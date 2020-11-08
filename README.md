@@ -171,6 +171,11 @@ find . \( -path ./node_modules -or -path ./.git \) -prune -false -or -type f
 ```
 Some shorthand here `-o=-or, -a=-and, !=-not`
 
+Tips: don't print permission denied
+```
+find / -user aaa -group bbb 2>/dev/null | xargs cat
+```
+
 ## disk space
 `du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
 512 byte = 1 block \
