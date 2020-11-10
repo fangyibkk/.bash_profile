@@ -199,3 +199,15 @@ Run this on local machine
 ```
 scp root@123.123.123.123:~/path/to/that/file.txt local.txt
 ```
+### xclip
+default is primary and when specified copied to clipboard
+```
+xclip -selection clipboard file.txt
+cat file.txt | xclip
+cat file.txt | xclip -selection clipboard
+```
+or with "process substitution"
+```
+cat file.txt | tee >(xclip)
+cat file.txt | tee /dev/tty | xclip
+```
