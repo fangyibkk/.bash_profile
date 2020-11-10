@@ -189,7 +189,13 @@ du -a | sort -nr # most common case
 ```
 
 ### ssh copy file
+#### Local --> Server
 Run this on local machine
 ```
 scp -i "my_pem_file.pem" myfile.zip ubuntu@ec2-13-...-131.ap-southeast-1.compute.amazonaws.com:/home/ubuntu/
+```
+#### Server --> Local
+Run this on local machine
+```
+scp root@123.123.123.123:~/path/to/that/file.txt local.txt
 ```
