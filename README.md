@@ -175,6 +175,10 @@ Tips: don't print permission denied
 ```
 find / -user aaa -group bbb 2>/dev/null | xargs cat
 ```
+Sample cases: copy all images of repos
+```
+find ./ \( -path "./node_modules" -or -path ./.git -or -path ./build \) -prune -false -or -type f -regex ".*.\(jpe?g\|png\|svg\)" -exec cp {} ../mysites-assets \;
+```
 
 ## disk space
 `du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
