@@ -171,6 +171,8 @@ find . \( -path ./node_modules -or -path ./.git \) -prune -false -or -type f
 ```
 Some shorthand here `-o=-or, -a=-and, !=-not`
 
+Pro Tips: `-path` must be **exact** otherwise use `-name`
+
 Tips: don't print permission denied
 ```
 find / -user aaa -group bbb 2>/dev/null | xargs cat
@@ -179,6 +181,7 @@ Sample cases: copy all images of repos
 ```
 find ./ \( -path "./node_modules" -or -path ./.git -or -path ./build \) -prune -false -or -type f -regex ".*.\(jpe?g\|png\|svg\)" -exec cp {} ../mysites-assets \;
 ```
+the `false` command prevents exiting when `-or` operator find some truthy value. This only occurs in some system.
 
 ## disk space
 `du` will print in `kb`. The option `-h` is human-readable and `-b` force it to be bytes. \
