@@ -195,6 +195,12 @@ du -a # directories and file
 du -a | sort -nr # most common case
 ```
 
+## search file content
+Excluding binary `-I`
+```
+grep -rI <word> <directory>
+```
+
 ### ssh copy file
 #### Local --> Server
 Run this on local machine
