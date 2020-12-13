@@ -65,6 +65,17 @@ L = redirect if moved
 ```
 convert  your.jpg  -transparent white  your.png
 ```
+
+### not 255,255,255 white
+```
+convert  your.jpg -fuzz 12% -transparent white  your.png
+```
+Change `12%` to any `XX%` you want
+
+### Identify image size
+```
+identify -ping -format '%w %h' image.jpg
+```
 ### simple resize
 ```
 convert logo512.png -resize 150x150 logo150.png
