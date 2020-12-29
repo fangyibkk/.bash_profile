@@ -235,3 +235,12 @@ or with "process substitution"
 cat file.txt | tee >(xclip)
 cat file.txt | tee /dev/tty | xclip
 ```
+### Log
+listing only error log
+```
+journalctl -p 3 -r
+```
+only at the current boot\
+```
+journalctl -p 3 -xb -r
+```
