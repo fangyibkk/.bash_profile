@@ -248,3 +248,17 @@ only at the current boot\
 ```
 journalctl -p 3 -xb -r
 ```
+
+### Create live USB
+Finding device
+```
+ls -la /dev/disk/by-id
+```
+Write to that disk
+```
+sudo dd if=manjaro-xfce-20.2-201203-linux59.iso of=/dev/sdb bs=4M oflag=sync status=progress
+```
+Checksum
+```
+sudo dd if=/dev/sdb iflag=count_bytes count=2818185216 | sha1sum
+```
