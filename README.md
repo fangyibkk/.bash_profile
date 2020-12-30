@@ -147,6 +147,10 @@ The `<<<` is turning string to file stdin. Alternatively,
 ```
 echo "1f20cd153b2c32...612b3e927ba audacity-win-2.4.2.exe" | sha256sum --check
 ```
+Also work on SHA1
+```
+sha1sum --check <<< "3e0c1edb671d2169ef0dbda7d91ffea57d7a0dc4 manjaro-xfce-20.2-201203-linux59.iso"
+```
 
 ### find command findutils
 ```
