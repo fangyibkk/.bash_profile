@@ -262,3 +262,19 @@ Checksum
 ```
 sudo dd if=/dev/sdb iflag=count_bytes count=2818185216 | sha1sum
 ```
+
+### create fake file for testing
+```
+dd if=/dev/zero of=./sample-file.txt bs=1M count=1
+```
+Note `bs` is block size for copying NOT block size of file system `stats sample-file.txt` still show `4096` \
+Note `count` is the time of copying
+```
+dd if=/dev/zero of=./sample-file-2.txt bs=1 count=0 seek=1M
+```
+The word `seek` make the system skip. This method doesn't actually copy or write anything. Just skip.
+The new method is
+```
+fallocate -l 100M sample-file-3.txt
+truncate -s 1M sample-file-3.txt
+```
