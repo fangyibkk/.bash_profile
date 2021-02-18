@@ -95,6 +95,15 @@ convert -flop input.png output.png
 convert -background white -gravity center before.jpg -resize 200x200 -extent 200x200 after.jpg
 ```
 
+### repeat command replace string 192 with string 512
+```
+!!:gs/192/512
+```
+The shorthand will only replace once
+```
+^192^512
+```
+
 ### resize with transparent bg
 ```
 convert logo192.png -background none -resize 192x192 -gravity center -extent 192x192 square192.png
