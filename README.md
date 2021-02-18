@@ -95,6 +95,11 @@ convert -flop input.png output.png
 convert -background white -gravity center before.jpg -resize 200x200 -extent 200x200 after.jpg
 ```
 
+### resize with transparent bg
+```
+convert logo192.png -background none -resize 192x192 -gravity center -extent 192x192 square192.png
+```
+
 ### resize video
 ```sh
 ffmpeg -i full-video.mp4 -b 800k min-video.mp4
