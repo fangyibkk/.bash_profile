@@ -80,6 +80,10 @@ identify -ping -format '%w %h' image.jpg
 ```
 convert logo512.png -resize 150x150 logo150.png
 ```
+### Generate favicon
+```
+convert -resize x16 -gravity center -crop 16x16+0+0 logo512.png -flatten -colors 256 -background transparent sample.ico
+```
 
 ### resize image
 ```sh
