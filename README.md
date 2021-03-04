@@ -296,3 +296,9 @@ The new method is
 fallocate -l 100M sample-file-3.txt
 truncate -s 1M sample-file-3.txt
 ```
+
+## Regexp Replace lowercase
+replace `"WORD"`
+`(".*?")`
+to word `word`
+`\L$1`
